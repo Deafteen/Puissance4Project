@@ -2,20 +2,17 @@
 #include "EngineManager.h"
 
 
-StateEngine::StateEngine(void)
-{
+StateEngine::StateEngine(void) {
 
 }
 
-StateEngine::StateEngine(EngineManager* engineManagerP)
-{
+StateEngine::StateEngine(EngineManager* engineManagerP) {
 	engineManager = engineManagerP;
 }
 
 
-StateEngine::~StateEngine(void)
-{
-	
+StateEngine::~StateEngine(void) {
+
 }
 
 void StateEngine::addComputeObject(ComputeObject* computeObject) {

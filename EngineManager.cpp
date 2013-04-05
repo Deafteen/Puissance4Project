@@ -10,6 +10,8 @@ EngineManager::EngineManager(void)
 	engineList.push_back(stateEngine);
 	engineList.push_back(graphicEngine);
 	// new grille ou new manager ?
+	
+	grid= new Grid(this);
 }
 
 EngineManager::~EngineManager(void)

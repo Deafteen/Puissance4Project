@@ -7,9 +7,8 @@
 
 class EngineManager;
 
-class StateEngine : public Engine
-{
-	
+class StateEngine : public Engine {
+
 	EngineManager* engineManager;
 	std::list<ComputeObject*> computeObjectList;
 public:
@@ -17,7 +16,7 @@ public:
 	StateEngine(EngineManager*);
 	~StateEngine(void);
 	void process();
-	
+
 	void addComputeObject(ComputeObject*);
 	void removeComputeObject(ComputeObject*);
 };
