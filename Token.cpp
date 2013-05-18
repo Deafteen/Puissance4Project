@@ -2,7 +2,7 @@
 #include "graphics.h"
 #include "EngineManager.h"
 
-SDL_Surface *imageOptionMenu =NULL;
+SDL_Surface *imageOptionMenu = NULL;
 
 Token::Token(EngineManager* engineManagerP)
 {

@@ -7,7 +7,7 @@ GraphicEngine::GraphicEngine(EngineManager* EngineManagerP)
 	engineManager = EngineManagerP;
 
 	Graphics::init_graphics();
-	backgroundColor = Graphics::build_color(0, 255, 0);
+	backgroundColor = Graphics::build_color(0, 0, 0);
 }
 
 GraphicEngine::~GraphicEngine(void)
@@ -43,5 +43,5 @@ void GraphicEngine::process()
 	Graphics::unlock();
 
 	//on attend le temps necessaire pour atteindre le taux de rafraichissement souhaite
-	Graphics::sync();
+	//Graphics::sync();
 }

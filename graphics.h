@@ -15,8 +15,8 @@ namespace Graphics {
 	/**
 	 * taille de la fenetre
 	 */
-	#define WIDTH  1200 
-	#define HEIGHT 720
+	#define WIDTH  800 
+	#define HEIGHT 600
 
 	/**
 	 * taux de rafraichissement de la fenetre (images/sec.)
@@ -105,4 +105,5 @@ namespace Graphics {
 
 	void display_image(SDL_Surface* image, int x, int y);
 
+     void display_imageBlitNoScreen(SDL_Surface* image,SDL_Surface* imageUBlitOn, int x, int y);
 }

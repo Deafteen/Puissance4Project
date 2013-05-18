@@ -11,7 +11,7 @@ class EngineManager;
 class InputEngine : public Engine
 {
 	bool display;
-	SDL_Event event;
+	//SDL_Event event;
 	bool toucheAppuyeeSpaceBar;
 	EngineManager* engineManager;
     std::list<InputObject*>inputObjectList;

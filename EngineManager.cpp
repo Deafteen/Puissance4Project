@@ -1,4 +1,6 @@
 #include "EngineManager.h"
+#include <iostream>
+#include <limits>
 
 class Puissance4;
 
@@ -26,6 +28,7 @@ void EngineManager::start()
 	//while(inputEngine->GetDisplay()) {
 	for (std::list<Engine*>::iterator it = engineList.begin(); it != engineList.end(); it++) {
 		(*it)->process();
+
 	}
 		// mettre statemanager en fonctionnement ?
 		//temps avec sleep

@@ -166,3 +166,5 @@ pip-log.txt
 *.vcxproj
 *.vcxproj.filters
 *.sln
+
+*.o

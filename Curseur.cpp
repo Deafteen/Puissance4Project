@@ -15,7 +15,8 @@ Curseur::Curseur(EngineManager* engineManagerP)
 	engineManager->GetStateEngine()->addComputeObject(this);
     engineManager->GetInputEngine()->addInputObject(this);
     if( image3 == NULL){
-	    image3 = SDL_LoadBMP("Images/curseur.bmp");
+	    image3 = SDL_LoadBMP("Images/curseurTRANSPARENT.bmp");
+        SDL_SetColorKey(image3, SDL_SRCCOLORKEY, SDL_MapRGB(image3->format, 0, 0, 255));
 	}
 }
 
@@ -50,5 +51,7 @@ void Curseur::compute() {
 }
 
 void Curseur::display() {
-    //Graphics::display_image(image3,0,0);
+    Graphics::display_image(image3,0,0);
+    //Graphics::display_imageBlitNoScreen(image3, 
+    
 }

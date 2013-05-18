@@ -373,7 +373,8 @@ namespace Graphics {
 
 	void init_graphics()
 	{
-		screen = SDL_SetVideoMode(WIDTH, HEIGHT, 8, SDL_SWSURFACE);
+		//SDL_SWSURFACE
+        screen = SDL_SetVideoMode(WIDTH, HEIGHT, 8, SDL_DOUBLEBUF|SDL_HWSURFACE);
 		if ( screen == NULL )
 		{
 			fprintf(stderr, "Impossible de passer en %dx%d en 8 bpp: %s\n", WIDTH, HEIGHT, SDL_GetError());
@@ -402,4 +403,12 @@ namespace Graphics {
 		SDL_Flip(screen);
 	}
 
+    void display_imageBlitNoScreen(SDL_Surface* image,SDL_Surface* imageUBlitOn, int x, int y) {
+		SDL_Rect position;
+
+	    position.x = x;
+	    position.y = y;
+        SDL_BlitSurface(image, NULL, imageUBlitOn, &position);
+		SDL_Flip(screen);
+	}
 }
