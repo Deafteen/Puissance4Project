@@ -1,5 +1,4 @@
 #include "Token.h"
-#include "graphics.h"
 #include "EngineManager.h"
 
 SDL_Surface *imageOptionMenu = NULL;

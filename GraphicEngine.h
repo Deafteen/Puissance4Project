@@ -28,5 +28,7 @@ public:
 	void addObject(DisplayObject*); //ici addDisplayObject(DisplayObject*)
 	void removeObject(DisplayObject*); // ici RemoveDisplayObject(DisplayObject*)
     void displayImage(SDL_Surface*, int, int);
+
+    int getHeight();
 };
 

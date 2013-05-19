@@ -64,3 +64,7 @@ void GraphicEngine::process()
 	//on attend le temps necessaire pour atteindre le taux de rafraichissement souhaite
 	//Graphics::sync();
 }
+
+int GraphicEngine::getHeight(){
+    return height;
+}

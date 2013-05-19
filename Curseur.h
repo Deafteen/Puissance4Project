@@ -16,8 +16,12 @@ public:
     void display();
 
 private:
+int positionX, positionY;
+int pas; //le pas de deplacement du curseur en vertical
 EngineManager* engineManager;
 bool moveCursorLeft;
 bool moveCursorRight;
+bool moveCursorUp;
+bool moveCursorDown;
 };
 
