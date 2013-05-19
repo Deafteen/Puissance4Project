@@ -51,7 +51,7 @@ void Curseur::compute() {
 }
 
 void Curseur::display() {
-    Graphics::display_image(image3,0,0);
+    //Graphics::display_image(image3,0,0);
     //Graphics::display_imageBlitNoScreen(image3, 
-    
+    engineManager->GetGraphicEngine()->displayImage(image3, 0, 0);
 }

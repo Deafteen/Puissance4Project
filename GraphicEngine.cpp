@@ -6,12 +6,24 @@ GraphicEngine::GraphicEngine(EngineManager* EngineManagerP)
 {
 	engineManager = EngineManagerP;
 
-	Graphics::init_graphics();
-	backgroundColor = Graphics::build_color(0, 0, 0);
+    width = 800;
+    height = 600;
+	//Graphics::init_graphics();
+    SDL_Init(SDL_INIT_VIDEO);
+	screen = SDL_SetVideoMode(width, height, 32, SDL_HWSURFACE);
+    //backgroundColor = Graphics::build_color(0, 0, 0);
 }
 
 GraphicEngine::~GraphicEngine(void)
 {
+}
+
+void GraphicEngine::displayImage(SDL_Surface* image, int x, int y) {
+    SDL_Rect position;
+
+    position.x = x;
+    position.y = y;
+    SDL_BlitSurface(image, NULL, screen, &position);
 }
 
 void GraphicEngine::addObject(DisplayObject* displayObject)
@@ -27,10 +39,15 @@ void GraphicEngine::removeObject(DisplayObject* displayObject)
 void GraphicEngine::process()
 {
 	// on verrouille l'ecran /
-	Graphics::lock();
+	//Graphics::lock();
 
 	// on remplit la fenetre avec la couleur cree au debut de la fonction
-	Graphics::fill_screen(backgroundColor);
+	//Graphics::fill_screen(SDL_MapRGB(screen->format, 0, 0, 0));
+
+    SDL_WM_SetCaption("Puissance4", NULL); // titre de notre fenetre
+    
+    // on remplit la fenetre avec une couleur
+    SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 0, 0, 0));
 
 	// on dessine un triangle
 	//engineManager->GetStateEngine()->GetSpaceShip()->displaySingularShip();
@@ -39,8 +56,10 @@ void GraphicEngine::process()
 		(*it)->display();
 	}
 
-	// on deverouille et on rafraichit l'ecran
-	Graphics::unlock();
+    SDL_Flip(screen);
+
+    // on deverouille et on rafraichit l'ecran
+	//Graphics::unlock();
 
 	//on attend le temps necessaire pour atteindre le taux de rafraichissement souhaite
 	//Graphics::sync();

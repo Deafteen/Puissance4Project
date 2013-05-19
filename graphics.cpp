@@ -400,7 +400,7 @@ namespace Graphics {
 	    position.x = x;
 	    position.y = y;
 		SDL_BlitSurface(image, NULL, screen, &position);
-		SDL_Flip(screen);
+		//SDL_Flip(screen);
 	}
 
     void display_imageBlitNoScreen(SDL_Surface* image,SDL_Surface* imageUBlitOn, int x, int y) {

@@ -1,9 +1,8 @@
 #include "EngineManager.h"
-#include "graphics.h"
 
 #include "Grid.h"
 
-//SDL_Surface *image =NULL;
+SDL_Surface *background =NULL;
 
 Grid::Grid(EngineManager* engineManagerP) {
 	engineManager = engineManagerP;
@@ -22,13 +21,10 @@ Grid::~Grid() {
 }
 
 void Grid::display() {
-	Graphics::display_image(background,0,0);
+	//Graphics::display_image(background,0,0);
+    engineManager->GetGraphicEngine()->displayImage(background, 0, 0);
 	
 }
 void Grid::compute() {
 	
-}
-
-SDL_Surface* Grid::getBackground() {
-    return background;
 }

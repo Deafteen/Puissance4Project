@@ -9,7 +9,6 @@ class Grid : public ComputeObject, DisplayObject {
 private:
     EngineManager* engineManager;
 	bool adjacencyMatrix;
-    SDL_Surface* background;
 
 
 public:
@@ -19,5 +18,4 @@ public:
 	void display();
 	void compute();
     //addToken
-    SDL_Surface* getBackground(); 
 };

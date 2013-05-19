@@ -26,5 +26,6 @@ void Token::compute() {
 }
 
 void Token::display() {
-    Graphics::display_image(imageOptionMenu,0,0);
+    //Graphics::display_image(imageOptionMenu,0,0);
+    engineManager->GetGraphicEngine()->displayImage(imageOptionMenu, 0, 0);
 }
