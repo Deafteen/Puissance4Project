@@ -3,7 +3,7 @@
 #include "Puissance4.h"
 #include "StateManager.h"
 
-SDL_Surface *image3 =NULL;
+//SDL_Surface *image3 =NULL;
 
 Curseur::Curseur(EngineManager* engineManagerP) {
     positionX = 60; positionY = 100;
@@ -17,11 +17,10 @@ Curseur::Curseur(EngineManager* engineManagerP) {
     engineManager->GetGraphicEngine()->addObject(this);
 	engineManager->GetStateEngine()->addComputeObject(this);
     engineManager->GetInputEngine()->addInputObject(this);
-    if( image3 == NULL){
-	    image3 = SDL_LoadBMP("Images/curseurTRANSPARENT.bmp");
-        SDL_SetColorKey(image3, SDL_SRCCOLORKEY, SDL_MapRGB(image3->format, 0, 0, 255)); //on gere la transparence du curseur
-        //le curseur a le fond de son image colorier en bleu 0, 0, 255. Cette fonction rend le bleu invisible
-	}
+  
+	image3 = SDL_LoadBMP("Images/curseurTRANSPARENT.bmp");
+    SDL_SetColorKey(image3, SDL_SRCCOLORKEY, SDL_MapRGB(image3->format, 0, 0, 255)); //on gere la transparence du curseur
+    //le curseur a le fond de son image colorier en bleu 0, 0, 255. Cette fonction rend le bleu invisible
 }
 
 
@@ -30,6 +29,7 @@ Curseur::~Curseur(void)
     engineManager->GetGraphicEngine()->removeObject(this);
 	engineManager->GetStateEngine()->removeComputeObject(this);
     engineManager->GetInputEngine()->removeInputObject(this);
+    SDL_FreeSurface(image3);
 }
 
 void Curseur::process(SDL_Event event) {

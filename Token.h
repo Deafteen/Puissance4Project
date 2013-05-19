@@ -1,6 +1,7 @@
 #pragma once
 #include "DisplayObject.h"
 #include "ComputeObject.h"
+#include "SDL.h"
 
 class EngineManager;
 
@@ -15,5 +16,6 @@ public:
 
 private:
     EngineManager* engineManager;
+    SDL_Surface* imageOptionMenu;
 };
 

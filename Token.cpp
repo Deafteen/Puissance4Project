@@ -1,14 +1,13 @@
 #include "Token.h"
 #include "EngineManager.h"
 
-SDL_Surface *imageOptionMenu = NULL;
+//SDL_Surface *imageOptionMenu = NULL;
 
 Token::Token(EngineManager* engineManagerP)
 {
     engineManager = engineManagerP;
-    if( imageOptionMenu == NULL){
-	    imageOptionMenu = SDL_LoadBMP("Images/OptionMenu.bmp");
-	}
+
+	imageOptionMenu = SDL_LoadBMP("Images/OptionMenu.bmp");
     engineManager->GetGraphicEngine()->addObject(this);
 	engineManager->GetStateEngine()->addComputeObject(this);
 }
@@ -18,6 +17,7 @@ Token::~Token(void)
 {
     engineManager->GetGraphicEngine()->removeObject(this);
 	engineManager->GetStateEngine()->removeComputeObject(this);
+    SDL_FreeSurface(imageOptionMenu);
 }
 
 void Token::compute() {

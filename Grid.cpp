@@ -2,7 +2,7 @@
 
 #include "Grid.h"
 
-SDL_Surface *background =NULL;
+//SDL_Surface *background =NULL;
 
 Grid::Grid(EngineManager* engineManagerP) {
 	engineManager = engineManagerP;
@@ -18,6 +18,7 @@ Grid::Grid(EngineManager* engineManagerP) {
 Grid::~Grid() {
 	engineManager->GetGraphicEngine()->removeObject(this);
 	engineManager->GetStateEngine()->removeComputeObject(this);
+    SDL_FreeSurface(background);
 }
 
 void Grid::display() {

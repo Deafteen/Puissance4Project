@@ -10,7 +10,6 @@ private:
     EngineManager* engineManager;
 	bool adjacencyMatrix;
 
-
 public:
 	Grid(EngineManager*);
 	~Grid(void);
@@ -18,4 +17,5 @@ public:
 	void display();
 	void compute();
     //addToken
+    SDL_Surface *background;
 };
