@@ -3,6 +3,7 @@
 #include "Token.h"
 #include "Curseur.h"
 #include "CloseApplicationObject.h"
+#include "SDL.h"
 
 class Puissance4;
 

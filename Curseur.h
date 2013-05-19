@@ -2,6 +2,7 @@
 #include "InputObject.h"
 #include "DisplayObject.h"
 #include "ComputeObject.h"
+#include "SDL.h"
 
 class EngineManager;
 

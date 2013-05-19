@@ -1,7 +1,6 @@
 #pragma once
 #include "Engine.h"
 #include "DisplayObject.h"
-#pragma once
 #include <list>
 
 using namespace std;

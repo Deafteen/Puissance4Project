@@ -1,5 +1,5 @@
 #pragma once
-#include "graphics.h"
+#include "SDL.h"
 class InputObject
 {
 public:

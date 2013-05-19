@@ -1,5 +1,4 @@
 #include "Curseur.h"
-#include "graphics.h"
 #include "EngineManager.h"
 #include "Puissance4.h"
 #include "StateManager.h"

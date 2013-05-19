@@ -1,6 +1,5 @@
 #include "OptionMenu.h"
 #include "Puissance4.h"
-#include "graphics.h"
 
 OptionMenu::OptionMenu(Puissance4* puissance4P)
 {
