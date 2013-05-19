@@ -23,6 +23,6 @@ void OptionMenu::start() {
 
 void OptionMenu::stop() {
     delete token;
-    //delete curseur;
+    delete curseur;
     delete closeApplicationObject;
 }
