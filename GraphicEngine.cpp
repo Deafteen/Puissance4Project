@@ -1,4 +1,4 @@
-#include "graphics.h"
+#include "SDL/SDL.h"
 #include "GraphicEngine.h"
 #include "EngineManager.h"
 

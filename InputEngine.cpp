@@ -1,5 +1,5 @@
 #include "InputEngine.h"
-#include "SDL.h"
+#include "SDL/SDL.h"
 #include <iostream>
 #include "EngineManager.h"
 #include "Puissance4.h"
