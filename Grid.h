@@ -1,5 +1,4 @@
 #pragma once
-#include "Grid.h"
 #include "ComputeObject.h"
 #include "DisplayObject.h"
 #include "SDL.h"

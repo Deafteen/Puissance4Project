@@ -57,7 +57,7 @@
 ##==========================================================================
 
 # The pre-processor and compiler options.
-MY_CFLAGS = `sdl-config --cflags` outputs -I/usr/include/SDL
+MY_CFLAGS = `sdl-config --cflags`
 
 # The linker options. je change le 49 par 42 option boost : -l:libboost_system.so.1.42.0 -l:libboost_thread.so.1.42.0
 MY_LIBS   = `sdl-config --libs` -I/usr/include/SDL
