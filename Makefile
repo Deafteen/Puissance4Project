@@ -60,10 +60,10 @@
 MY_CFLAGS = `sdl-config --cflags` outputs -I/usr/include/SDL
 
 # The linker options. je change le 49 par 42 option boost : -l:libboost_system.so.1.42.0 -l:libboost_thread.so.1.42.0
-MY_LIBS   = `sdl-config --libs`   outputs -I/usr/include/SDL
+MY_LIBS   = `sdl-config --libs` -I/usr/include/SDL
 
 # The pre-processor options used by the cpp (man cpp for more).
-CPPFLAGS  = -W 
+CPPFLAGS  = -W -std=c++0x -Wswitch-enum
 
 # The options used in linking as well as in any direct use of ld.
 LDFLAGS   =
