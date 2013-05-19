@@ -2,6 +2,7 @@
 #include "GeneralMenu.h"
 #include "Puissance4.h"
 #include "OptionMenu.h"
+#include "SelectGameMode.h"
 
 StateManager::StateManager(void) {
     
@@ -15,6 +16,7 @@ StateManager::StateManager(Puissance4* puissance4P)
     nextType = StateType::GENERAL_MENU;
     states.insert(std::pair<StateType, State*>(GENERAL_MENU, new GeneralMenu(puissance4)));
     states.insert(std::pair<StateType, State*>(OPTION, new OptionMenu(puissance4)));
+    states.insert(std::pair<StateType, State*>(SELECT_GAME_MODE, new SelectGameMode(puissance4)));
     //states.insert(std::pair<StateType, State*>(OPTION, new 
     
 /*    std::map<StateType, State*>::iterator it = states.find(currentType); // find (=) get ,  sauf que sa return un iterator qui pointe vers un element
