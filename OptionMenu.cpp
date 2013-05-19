@@ -18,7 +18,7 @@ OptionMenu::~OptionMenu(void)
 void OptionMenu::start() {
     //curseur = new Curseur(puissance4->getEngineManager());
     token = new Token(puissance4->getEngineManager());
-    //curseur = new Curseur(puissance4->getEngineManager());
+    curseur = new Curseur(puissance4->getEngineManager());
     closeApplicationObject = new CloseApplicationObject(puissance4->getEngineManager());
 }
 

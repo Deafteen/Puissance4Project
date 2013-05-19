@@ -12,7 +12,7 @@ Puissance4::~Puissance4(void)
 }
 
 void Puissance4::launch() {
-    while(engineManager->GetInputEngine()->GetDisplay() && SDL_WaitEvent(&event)) {// && SDL_WaitEvent(&event)
+    while(engineManager->GetInputEngine()->GetDisplay()) {// && SDL_WaitEvent(&event)
             engineManager->start();//rename start();
             stateManager->process();//rename process();
             //SDL_Delay(5000);            
