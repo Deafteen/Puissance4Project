@@ -63,7 +63,7 @@ MY_CFLAGS = `sdl-config --cflags`
 MY_LIBS   = `sdl-config --libs` -I/usr/include/SDL
 
 # The pre-processor options used by the cpp (man cpp for more).
-CPPFLAGS  = -W -std=c++0x -Wswitch-enum
+CPPFLAGS  = -W -std=c++0x
 
 # The options used in linking as well as in any direct use of ld.
 LDFLAGS   =
