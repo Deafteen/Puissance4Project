@@ -15,7 +15,7 @@ StateManager::StateManager(Puissance4* puissance4P)
     currentType = StateType::NONE;
     nextType = StateType::GENERAL_MENU;
     states.insert(std::pair<StateType, State*>(GENERAL_MENU, new GeneralMenu(puissance4)));
-    states.insert(std::pair<StateType, State*>(OPTION, new OptionMenu(puissance4)));
+    states.insert(std::pair<StateType, State*>(OPTION_MENU, new OptionMenu(puissance4)));
     states.insert(std::pair<StateType, State*>(SELECT_GAME_MODE, new SelectGameMode(puissance4)));
     //states.insert(std::pair<StateType, State*>(OPTION, new 
     

@@ -16,7 +16,7 @@ CloseApplicationObject::~CloseApplicationObject(void)
 }
 
 void CloseApplicationObject::process(SDL_Event event) {
-        switch (event.key.keysym.sym)
+    switch (event.key.keysym.sym)
     {
 	    case SDLK_q :
             engineManager->GetInputEngine()->setDisplay(event.type == SDL_KEYDOWN);

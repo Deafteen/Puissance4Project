@@ -15,7 +15,7 @@ void Puissance4::launch() {
     while(engineManager->GetInputEngine()->GetDisplay()) {// && SDL_WaitEvent(&event)
             engineManager->start();//rename start();
             stateManager->process();//rename process();
-            //SDL_Delay(5000);            
+            SDL_Delay(50);
     }
 }
 

@@ -1,8 +1,8 @@
 #include "Puissance4.h"
-#include "OptionMenu.h"
+#include "InGameMenu.h"
 
 
-OptionMenu::OptionMenu(Puissance4* puissance4P)
+InGameMenu::InGameMenu(Puissance4* puissance4P)
 {
     puissance4 = puissance4P;
     curseur = NULL;
@@ -12,12 +12,12 @@ OptionMenu::OptionMenu(Puissance4* puissance4P)
 }
 
 
-OptionMenu::~OptionMenu(void)
+InGameMenu::~InGameMenu(void)
 {
     SDL_FreeSurface(img);
 }
 
-void OptionMenu::start() {
+void InGameMenu::start() {
 
     curseur = new Curseur(puissance4->getEngineManager());
     image = new Image(puissance4->getEngineManager(), img);
@@ -25,7 +25,7 @@ void OptionMenu::start() {
     closeApplicationObject = new CloseApplicationObject(puissance4->getEngineManager());
 }
 
-void OptionMenu::stop() {
+void InGameMenu::stop() {
 
     delete curseur;
     delete image;

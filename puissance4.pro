@@ -22,7 +22,8 @@ SOURCES += \
     Curseur.cpp \
     SelectGameMode.cpp \
     CloseApplicationObject.cpp \
-    Image.cpp
+    Image.cpp \
+    InGameMenu.cpp
 
 HEADERS += \
     Token.h \
@@ -43,5 +44,5 @@ HEADERS += \
     ComputeObject.h \
     SelectGameMode.h \
     CloseApplicationObject.h \
-    Image.h
-
+    Image.h \
+    InGameMenu.h

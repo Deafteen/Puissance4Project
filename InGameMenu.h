@@ -7,11 +7,11 @@
 
 class Puissance4;
 
-class OptionMenu: public State
+class InGameMenu: public State
 {
 public:
-    OptionMenu(Puissance4*);
-    ~OptionMenu(void);
+    InGameMenu(Puissance4*);
+    ~InGameMenu(void);
 
     void start();
     void stop();

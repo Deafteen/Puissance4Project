@@ -52,7 +52,7 @@ void Curseur::process(SDL_Event event) {
 
 void Curseur::compute() {
     if(moveCursorLeft) {
-        engineManager->getPuissance4()->getStateManager()->setNxtMenu(StateManager::StateType::OPTION);
+        engineManager->getPuissance4()->getStateManager()->setNxtMenu(StateManager::StateType::OPTION_MENU);
     }
     if(moveCursorRight) {
         engineManager->getPuissance4()->getStateManager()->setNxtMenu(StateManager::StateType::GENERAL_MENU);
