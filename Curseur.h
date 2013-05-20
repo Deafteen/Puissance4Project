@@ -13,11 +13,10 @@ public:
     ~Curseur(void);
 
     void process(SDL_Event);
-    void compute();
-    void display();
+    virtual void compute();
+    virtual void display();
 
-private:
-
+protected:
     int positionX, positionY;
     int pas; //le pas de deplacement du curseur en vertical
     EngineManager* engineManager;
@@ -25,6 +24,9 @@ private:
     bool moveCursorRight;
     bool moveCursorUp;
     bool moveCursorDown;
+    bool pressEnter;
+    bool pressSpaceBar;
+    bool pressEscape;
     int ligneNum;
     SDL_Surface *image3;
 };

@@ -1,6 +1,6 @@
 #pragma once
 #include "State.h"
-#include "Curseur.h"
+#include "CurseurGeneralMenu.h"
 #include "SDL/SDL.h"
 #include "Image.h"
 
@@ -13,7 +13,7 @@ public:
     virtual void stop();
 protected:
     Puissance4* puissance4;
-    Curseur* curseur;
+    CurseurGeneralMenu* curseur;
     Image * image;
     SDL_Surface* img;
 };

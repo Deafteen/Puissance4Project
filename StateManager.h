@@ -8,7 +8,7 @@ class StateManager
 {
 
 public:
-    enum StateType {NONE, GENERAL_MENU,SELECT_GAME_MODE, OPTION_MENU, WIN};
+    enum StateType {NONE, GENERAL_MENU,SELECT_GAME_MODE, OPTION_MENU, WIN, RULES_MENU};
     StateType currentType;
     
     StateType nextType;    

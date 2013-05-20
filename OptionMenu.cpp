@@ -14,7 +14,7 @@ OptionMenu::~OptionMenu(void){
 }
 
 void OptionMenu::start() {
-    curseur = new Curseur(puissance4->getEngineManager());
+    curseur = new CurseurGeneralMenu(puissance4->getEngineManager());
     image = new Image(puissance4->getEngineManager(), img);
     closeApplicationObject = new CloseApplicationObject(puissance4->getEngineManager());
 }

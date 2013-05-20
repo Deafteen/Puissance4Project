@@ -3,6 +3,7 @@
 #include "Puissance4.h"
 #include "OptionMenu.h"
 #include "SelectGameMode.h"
+#include "RulesMenu.h"
 
 StateManager::StateManager(void) {
     
@@ -17,7 +18,8 @@ StateManager::StateManager(Puissance4* puissance4P)
     states.insert(std::pair<StateType, State*>(GENERAL_MENU, new GeneralMenu(puissance4)));
     states.insert(std::pair<StateType, State*>(OPTION_MENU, new OptionMenu(puissance4)));
     states.insert(std::pair<StateType, State*>(SELECT_GAME_MODE, new SelectGameMode(puissance4)));
-    //states.insert(std::pair<StateType, State*>(OPTION, new 
+    states.insert(std::pair<StateType, State*>(RULES_MENU, new RulesMenu(puissance4)));
+    //states.insert(std::pair<StateType, State*>(OPTION, new
     
 /*    std::map<StateType, State*>::iterator it = states.find(currentType); // find (=) get ,  sauf que sa return un iterator qui pointe vers un element
     if (it != states.end()) { // soit cest l element qu on cherche, soit cest la fin de la map

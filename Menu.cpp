@@ -17,7 +17,7 @@ Menu::~Menu(void)
 }
 
 void Menu::start() {
-    curseur = new Curseur(puissance4->getEngineManager());
+    curseur = new CurseurGeneralMenu(puissance4->getEngineManager());
     image = new Image(puissance4->getEngineManager(), img);
 
 }

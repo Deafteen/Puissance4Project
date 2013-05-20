@@ -1,14 +1,10 @@
 TEMPLATE = app
 CONFIG += console
 CONFIG -= qt
-
-
-LIBS = `sdl-config --libs`
-
+LIBS = `sdl-config \
+    --libs`
 QMAKE_CXXFLAGS += -std=c++0x
-
-SOURCES += \
-    Token.cpp \
+SOURCES += Token.cpp \
     StateManager.cpp \
     StateEngine.cpp \
     Puissance4.cpp \
@@ -19,7 +15,6 @@ SOURCES += \
     GraphicEngine.cpp \
     GeneralMenu.cpp \
     EngineManager.cpp \
-    Curseur.cpp \
     SelectGameMode.cpp \
     CloseApplicationObject.cpp \
     Image.cpp \
@@ -27,10 +22,12 @@ SOURCES += \
     Menu.cpp \
     RulesMenu.cpp \
     EndGame.cpp \
-    GameState.cpp
-
-HEADERS += \
-    Token.h \
+    GameState.cpp \
+    CurseurGeneralMenu.cpp \
+    Curseur.cpp \
+    CurseurSelectGameMode.cpp \
+    CurseurRulesMenu.cpp
+HEADERS += Token.h \
     StateManager.h \
     StateEngine.h \
     State.h \
@@ -44,7 +41,6 @@ HEADERS += \
     EngineManager.h \
     Engine.h \
     DisplayObject.h \
-    Curseur.h \
     ComputeObject.h \
     SelectGameMode.h \
     CloseApplicationObject.h \
@@ -53,4 +49,8 @@ HEADERS += \
     Menu.h \
     RulesMenu.h \
     EndGame.h \
-    GameState.h
+    GameState.h \
+    CurseurGeneralMenu.h \
+    Curseur.h \
+    CurseurSelectGameMode.h \
+    CurseurRulesMenu.h
