@@ -23,7 +23,8 @@ SOURCES += \
     SelectGameMode.cpp \
     CloseApplicationObject.cpp \
     Image.cpp \
-    InGameMenu.cpp
+    InGameMenu.cpp \
+    Menu.cpp
 
 HEADERS += \
     Token.h \
@@ -45,4 +46,5 @@ HEADERS += \
     SelectGameMode.h \
     CloseApplicationObject.h \
     Image.h \
-    InGameMenu.h
+    InGameMenu.h \
+    Menu.h
