@@ -24,7 +24,10 @@ SOURCES += \
     CloseApplicationObject.cpp \
     Image.cpp \
     InGameMenu.cpp \
-    Menu.cpp
+    Menu.cpp \
+    RulesMenu.cpp \
+    EndGame.cpp \
+    GameState.cpp
 
 HEADERS += \
     Token.h \
@@ -47,4 +50,7 @@ HEADERS += \
     CloseApplicationObject.h \
     Image.h \
     InGameMenu.h \
-    Menu.h
+    Menu.h \
+    RulesMenu.h \
+    EndGame.h \
+    GameState.h
