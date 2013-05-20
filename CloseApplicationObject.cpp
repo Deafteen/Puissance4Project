@@ -1,5 +1,7 @@
 #include "CloseApplicationObject.h"
 #include "EngineManager.h"
+#include "StateManager.h"
+#include "Puissance4.h"
 
 
 CloseApplicationObject::CloseApplicationObject(EngineManager* engineManagerP)
@@ -18,8 +20,9 @@ CloseApplicationObject::~CloseApplicationObject(void)
 void CloseApplicationObject::process(SDL_Event event) {
     switch (event.key.keysym.sym)
     {
-	    case SDLK_q :
-            engineManager->GetInputEngine()->setDisplay(event.type == SDL_KEYDOWN);
-		    break;
+            case SDLK_ESCAPE :
+            //engineManager->GetInputEngine()->setDisplay(event.type == SDL_KEYDOWN);
+            engineManager->getPuissance4()->getStateManager()->setNxtMenu(StateManager::StateType::GENERAL_MENU);
+            break;
     }
 }
