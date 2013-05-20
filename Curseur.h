@@ -25,6 +25,7 @@ private:
     bool moveCursorRight;
     bool moveCursorUp;
     bool moveCursorDown;
+    int ligneNum;
     SDL_Surface *image3;
 };
 

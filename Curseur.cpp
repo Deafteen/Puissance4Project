@@ -17,6 +17,7 @@ Curseur::Curseur(EngineManager* engineManagerP) {
     engineManager->GetGraphicEngine()->addObject(this);
 	engineManager->GetStateEngine()->addComputeObject(this);
     engineManager->GetInputEngine()->addInputObject(this);
+    ligneNum=0;
   
 	image3 = SDL_LoadBMP("Images/curseurTRANSPARENT.bmp");
     SDL_SetColorKey(image3, SDL_SRCCOLORKEY, SDL_MapRGB(image3->format, 0, 0, 255)); //on gere la transparence du curseur
@@ -57,14 +58,67 @@ void Curseur::compute() {
     if(moveCursorRight) {
         engineManager->getPuissance4()->getStateManager()->setNxtMenu(StateManager::StateType::GENERAL_MENU);
     }
+
+    /*
     if(moveCursorUp && positionY - pas > 0) {
         positionY -= pas;
     }
     if(moveCursorDown && positionY + pas < engineManager->GetGraphicEngine()->getHeight()) {
         positionY += pas;
     }
+    */
+    if(moveCursorUp){
+       ligneNum = (ligneNum - 1)%4;
+       if(ligneNum == -1){
+           ligneNum = 3;
+       }
+       positionY = ligneNum * 100 + 100;
+    }
+
+    if(moveCursorDown){
+       ligneNum = (ligneNum + 1)%4;
+       positionY = ligneNum * 100 + 100;
+    }
+
 }
 
 void Curseur::display() {
     engineManager->GetGraphicEngine()->displayImage(image3, positionX, positionY);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
